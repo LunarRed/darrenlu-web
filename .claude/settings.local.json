@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which gh && gh auth status 2>&1; which pnpm && pnpm --version; which node && node --version; which git && git --version)",
+      "Bash(pnpm dlx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --no-git --import-alias \"@/*\" --yes 2>&1)",
+      "Bash(cd /tmp/darrenlu-tmp && rsync -a --exclude='.git' --exclude='node_modules' --exclude='README.md' . /Users/dlu/GitHub/darrenlu-web/ && echo \"Done\")"
+    ]
+  }
+}
