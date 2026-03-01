@@ -2,28 +2,32 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 
 const services = [
   {
+    emoji: "🧭",
     title: "Fractional & Founding CTO",
     description:
-      "I've been the first engineer and the CTO who built the team. From defining technical vision to managing 24-person engineering orgs — I've done it from Day One, repeatedly.",
-    tags: ["Technical Strategy", "Team Building", "Fundraising Support"],
+      "From sole programmer to 24-person engineering org. I define technical vision, build teams, and align engineering with business goals.",
+    tags: ["Technical Strategy", "Team Building", "Fundraising"],
   },
   {
-    title: "Senior Full Stack Engineering",
+    emoji: "⚡",
+    title: "Full Stack Engineering",
     description:
-      "React, TypeScript, Node.js, Three.js — I write production code, not just architecture diagrams. Hands-on engineering with 25+ years of shipping real products.",
-    tags: ["React", "TypeScript", "Node.js", "API Design"],
+      "React, TypeScript, Node.js, Three.js — I ship production code, not just architecture decks. 25+ years of hands-on building.",
+    tags: ["React", "TypeScript", "Node.js", "APIs"],
   },
   {
+    emoji: "🔮",
     title: "AI & AR Engineering",
     description:
-      "Computer vision, multimodal LLMs, augmented reality — I've shipped all of it to millions of users. From TensorFlow models to agentic AI chatbots built with Google.",
+      "Computer vision, multimodal LLMs, augmented reality — shipped to millions. From TensorFlow to agentic AI chatbots with Google.",
     tags: ["Computer Vision", "LLMs", "MediaPipe", "Three.js"],
   },
   {
-    title: "Cloud Architecture & DevOps",
+    emoji: "☁️",
+    title: "Cloud & DevOps",
     description:
-      "Multi-cloud architectures on AWS, GCP, and Azure handling millions of transactions. From hosted data centers to scalable serverless — I've managed every migration.",
-    tags: ["AWS", "GCP", "Azure", "Docker", "CI/CD"],
+      "Multi-cloud on AWS, GCP, Azure handling millions of transactions. Managed every migration from data centers to serverless.",
+    tags: ["AWS", "GCP", "Azure", "Docker"],
   },
 ];
 
@@ -32,262 +36,282 @@ const timeline = [
     period: "2008 — Present",
     role: "Founding CTO",
     company: "FaceCake Marketing Technologies",
-    description:
-      "Built a real-time augmented reality shopping platform from scratch as sole programmer. Grew and managed 24-person engineering, QA, DevOps, and technical support team. Architected AI/ML pipeline handling 1M+ virtual products and millions of try-ons monthly.",
-    partners: ["Microsoft", "Disney", "CHANEL", "Macy\u2019s", "NFL", "Visa"],
+    highlight:
+      "Built a real-time AR shopping platform from scratch. Grew to 24-person team. 1M+ virtual products. Partners include Microsoft, Disney, CHANEL, Macy\u2019s, NFL, and Visa.",
     featured: true,
   },
   {
     period: "2002 — 2007",
-    role: "Sr. Vice President of Technology",
+    role: "SVP of Technology",
     company: "Go Apply Inc.",
-    description:
-      "Created frontend and backend for Internet lead generation startup from Day One inception through rapid growth and successful acquisition by Fidelity National Title. Built and managed 17-person development team.",
+    highlight:
+      "Created the platform from Day One through rapid growth and acquisition by Fidelity National Title. Built 17-person dev team.",
     featured: false,
   },
   {
     period: "1999 — 2001",
     role: "Founding Partner",
     company: "Acropolis One Consultants",
-    description:
-      "Founded consulting firm handling high-end client engagements. Acted as Startup CTO for FaceCake \u2014 created company\u2019s core web application in 100 days with team of in-house programmers and IBM Global Services.",
+    highlight:
+      "Founded consulting firm. Acted as Startup CTO for FaceCake \u2014 built their core application in 100 days.",
     featured: false,
   },
   {
     period: "1996 — 1999",
-    role: "Systems Architect & Network Engineer",
+    role: "Systems Architect",
     company: "Consumer Resource Services \u00b7 Autobytel.com",
-    description:
-      "Built custom web-based systems and managed enterprise networking infrastructure from the ground up during the early commercial Internet.",
+    highlight:
+      "Built web systems and enterprise networking infrastructure during the early commercial Internet.",
     featured: false,
   },
 ];
 
-const skillGroups = [
+const skillCategories = [
   {
-    category: "Full-Stack Development",
+    name: "Frontend",
     skills: [
-      "JavaScript & TypeScript",
-      "React 18 & Next.js",
-      "Node.js",
-      "Three.js & PixiJS",
-      "API Design & Implementation",
-      "SQL/T-SQL & MSSQL",
-      "Firebase & MongoDB",
+      "React 18",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Three.js",
+      "PixiJS",
+      "HTML/CSS",
     ],
   },
   {
-    category: "AI & Machine Learning",
+    name: "AI & AR",
     skills: [
-      "Computer Vision & Classification",
+      "Computer Vision",
       "Multimodal LLMs",
-      "Agentic AI Systems",
-      "MediaPipe & TensorFlow",
-      "WASM Runtime Optimization",
+      "Agentic AI",
+      "MediaPipe",
+      "TensorFlow",
+      "WASM AR",
+      "Virtual Try-On",
     ],
   },
   {
-    category: "Augmented Reality",
+    name: "Backend & Data",
     skills: [
-      "JS/WASM AR Frameworks",
-      "2D & 3D Virtual Try-On",
-      "Real-time Body Tracking",
-      "Browser-based AR at Scale",
+      "Node.js",
+      "API Design",
+      "SQL/T-SQL",
+      "MSSQL",
+      "Firebase",
+      "MongoDB",
     ],
   },
   {
-    category: "Cloud & DevOps",
-    skills: [
-      "AWS (EC2, S3, RDS, CloudFront, Lambda)",
-      "Google Cloud Platform",
-      "Microsoft Azure",
-      "Docker & Kubernetes",
-      "CI/CD & Multi-cloud Ops",
-    ],
+    name: "Cloud & DevOps",
+    skills: ["AWS", "GCP", "Azure", "Docker", "Kubernetes", "CI/CD"],
   },
   {
-    category: "Leadership & Strategy",
+    name: "Leadership",
     skills: [
-      "Engineering Team Management",
-      "Technical Vision & Roadmapping",
-      "Startup Founding & Scaling",
-      "Fundraising & Investor Relations",
+      "Team Building",
+      "Technical Vision",
+      "Startup Scaling",
+      "Fundraising",
       "Project Management",
-    ],
-  },
-  {
-    category: "Enterprise",
-    skills: [
-      "Partner Technical Relations",
-      "Enterprise Integration",
-      "Patent Co-authorship",
-      "Technical Writing",
-      "UI/UX Design & Optimization",
     ],
   },
 ];
 
 const stats = [
-  { number: "25+", label: "Years" },
-  { number: "1M+", label: "Products Scaled" },
-  { number: "24", label: "Engineers Led" },
-  { number: "6+", label: "Enterprise Partners" },
-  { number: "1", label: "US Patent" },
+  { number: "25+", label: "years of experience" },
+  { number: "1M+", label: "products scaled" },
+  { number: "24", label: "engineers led" },
+  { number: "6+", label: "enterprise partners" },
 ];
+
+const partners = ["Microsoft", "Disney", "CHANEL", "Macy\u2019s", "NFL", "Visa"];
 
 export default function Home() {
   return (
     <>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-5 md:px-12 backdrop-blur-md bg-black/60 border-b border-white/[0.04]">
+      {/* ─── Navigation ──────────────────────────────── */}
+      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 md:px-12 backdrop-blur-lg bg-white/80 border-b border-border-light">
         <a
           href="#"
-          className="font-mono text-[13px] text-secondary tracking-wide hover:text-foreground transition-colors"
+          className="font-display text-lg font-bold text-teal-dark tracking-tight"
         >
           darren.lu
         </a>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-7">
           <a
             href="#services"
-            className="hidden sm:block font-mono text-[13px] text-muted hover:text-foreground transition-colors accent-line"
+            className="hidden sm:block text-[14px] text-secondary hover:text-foreground transition-colors accent-line"
           >
             Services
           </a>
           <a
-            href="#track-record"
-            className="hidden sm:block font-mono text-[13px] text-muted hover:text-foreground transition-colors accent-line"
+            href="#experience"
+            className="hidden sm:block text-[14px] text-secondary hover:text-foreground transition-colors accent-line"
           >
-            Track Record
+            Experience
           </a>
           <a
             href="https://www.linkedin.com/in/DarrenLu/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[13px] text-muted hover:text-accent transition-colors accent-line"
+            className="hidden md:block text-[14px] text-secondary hover:text-teal transition-colors accent-line"
           >
             LinkedIn
           </a>
           <a
             href="mailto:contact@darren.lu"
-            className="font-mono text-[13px] text-accent hover:text-foreground transition-colors"
+            className="pill bg-teal text-white text-[13px] font-medium hover:bg-teal-dark transition-colors"
           >
-            Let&apos;s Talk
+            Get in Touch
           </a>
         </div>
       </nav>
 
-      {/* Hero */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center dot-grid overflow-hidden">
-        <div className="hero-glow" aria-hidden="true" />
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <div
-            className="inline-flex items-center gap-2.5 mb-10 anim-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
-            <span className="inline-block w-2 h-2 rounded-full bg-accent status-dot" />
-            <span className="font-mono text-[13px] text-accent/80 tracking-[0.2em] uppercase">
-              Available for Contract &amp; Fractional Roles
-            </span>
-          </div>
+      {/* ─── Hero ────────────────────────────────────── */}
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        {/* Decorative shapes */}
+        <div
+          className="hero-blob-1 -top-32 -right-40 md:right-10"
+          aria-hidden="true"
+        />
+        <div
+          className="hero-blob-2 bottom-20 -left-40 md:left-10"
+          aria-hidden="true"
+        />
+        <div
+          className="hero-ring top-40 right-20 hidden lg:block"
+          aria-hidden="true"
+        />
+        <div
+          className="hero-ring bottom-40 left-1/4 hidden lg:block"
+          style={{ width: 180, height: 180 }}
+          aria-hidden="true"
+        />
 
-          <h1
-            className="font-display text-[clamp(3.5rem,10vw,9rem)] font-extrabold tracking-[-0.03em] leading-[0.9] mb-8 anim-fade-up"
-            style={{ animationDelay: "0.35s" }}
-          >
-            DARREN
-            <br />
-            LU
-          </h1>
-
-          <p
-            className="text-[clamp(1.15rem,2.5vw,1.75rem)] text-secondary leading-relaxed mb-5 max-w-2xl mx-auto anim-fade-up"
-            style={{ animationDelay: "0.55s" }}
-          >
-            I architect the technology
-            <br className="hidden sm:block" /> that scales your vision.
-          </p>
-
-          <p
-            className="font-mono text-[13px] text-muted tracking-[0.15em] mb-14 anim-fade-in"
-            style={{ animationDelay: "0.75s" }}
-          >
-            Founding CTO&ensp;&middot;&ensp;Fractional
-            CTO&ensp;&middot;&ensp;Principal Full Stack Engineer
-          </p>
-
-          <div className="anim-fade-up" style={{ animationDelay: "0.95s" }}>
-            <a
-              href="mailto:contact@darren.lu"
-              className="group inline-flex items-center gap-3 px-9 py-4 border border-accent/60 text-accent font-mono text-[13px] tracking-[0.15em] uppercase hover:bg-accent hover:text-black hover:border-accent transition-all duration-300"
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 w-full">
+          <div className="max-w-3xl">
+            <div
+              className="anim-fade-in mb-7"
+              style={{ animationDelay: "0.15s" }}
             >
-              Start a Conversation
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                &rarr;
+              <span className="pill bg-teal-50 text-teal border border-teal-light">
+                <span className="inline-block w-2 h-2 rounded-full bg-teal animate-pulse" />
+                Available for new engagements
               </span>
-            </a>
+            </div>
+
+            <h1
+              className="font-display text-[clamp(2.75rem,6.5vw,5.5rem)] font-bold tracking-tight leading-[1.08] mb-6 anim-fade-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              I build the tech
+              <br />
+              that{" "}
+              <span className="gradient-text">scales your vision</span>
+            </h1>
+
+            <p
+              className="text-secondary text-[clamp(1.05rem,2vw,1.3rem)] leading-relaxed max-w-xl mb-10 anim-fade-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              Founding CTO with 25+ years of architecting platforms, building
+              engineering teams, and shipping products used by millions.
+              Based in Newport Beach, CA.
+            </p>
+
+            <div
+              className="flex flex-wrap gap-4 anim-fade-up"
+              style={{ animationDelay: "0.65s" }}
+            >
+              <a
+                href="mailto:contact@darren.lu"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-teal text-white font-medium text-[15px] hover:bg-teal-dark transition-all duration-300 shadow-lg shadow-teal/20 hover:shadow-xl hover:shadow-teal/25"
+              >
+                Start a Conversation
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">
+                  &rarr;
+                </span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/DarrenLu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-border text-secondary font-medium text-[15px] hover:border-teal hover:text-teal transition-all duration-300"
+              >
+                View LinkedIn
+                <span className="text-sm">&#8599;</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Stats row */}
+          <div
+            className="mt-20 pt-10 border-t border-border grid grid-cols-2 sm:grid-cols-4 gap-6 anim-fade-up"
+            style={{ animationDelay: "0.85s" }}
+          >
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <div className="font-display text-3xl md:text-4xl font-bold text-teal tracking-tight">
+                  {stat.number}
+                </div>
+                <div className="text-muted text-sm mt-0.5">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
-          <div className="w-px h-14 bg-gradient-to-b from-transparent via-muted/40 to-muted" />
+      {/* ─── Partner Strip ───────────────────────────── */}
+      <section className="py-10 border-y border-border-light bg-surface-warm">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+            <span className="text-muted text-sm">Trusted by</span>
+            {partners.map((partner) => (
+              <span
+                key={partner}
+                className="font-display text-[15px] font-semibold text-secondary/70 tracking-tight"
+              >
+                {partner}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Stats Strip */}
-      <section className="border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-4">
-          {stats.map((stat, i) => (
-            <ScrollReveal
-              key={stat.label}
-              delay={i * 80}
-              className="text-center md:text-left"
-            >
-              <div className="font-display text-3xl md:text-4xl font-bold text-accent tracking-tight">
-                {stat.number}
-              </div>
-              <div className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase mt-1">
-                {stat.label}
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-24 md:py-36 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <p className="font-mono text-[13px] text-accent tracking-[0.2em] uppercase mb-4">
-              Services
-            </p>
-            <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold tracking-tight leading-[1.1] mb-20 max-w-xl">
-              What I Bring
+      {/* ─── Services ────────────────────────────────── */}
+      <section id="services" className="py-24 md:py-32 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal className="text-center mb-16">
+            <span className="pill bg-teal-50 text-teal border border-teal-light text-[13px] mb-5 inline-flex">
+              What I Do
+            </span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight leading-tight">
+              Everything you need to go
               <br />
-              to the Table
+              from idea to launch
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             {services.map((service, i) => (
               <ScrollReveal
                 key={service.title}
-                delay={i * 100}
-                className="group border border-border p-8 md:p-11 hover:border-accent/25 transition-all duration-500 bg-card/40"
+                delay={i * 80}
+                className="card-lift rounded-2xl border border-border bg-card p-8 md:p-9"
               >
-                <div className="font-mono text-[12px] text-muted/60 tracking-wider mb-5">
-                  0{i + 1}
-                </div>
-                <h3 className="font-display text-xl md:text-2xl font-bold mb-4 group-hover:text-accent transition-colors duration-500">
+                <div className="text-3xl mb-5">{service.emoji}</div>
+                <h3 className="font-display text-xl font-bold mb-3 tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-secondary text-[15px] leading-relaxed mb-7">
+                <p className="text-secondary text-[15px] leading-relaxed mb-6">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[11px] text-muted border border-border/80 px-3 py-1 tracking-wide"
+                      className="text-[12px] text-teal bg-teal-50 px-3 py-1 rounded-full font-medium"
                     >
                       {tag}
                     </span>
@@ -299,75 +323,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Track Record */}
+      {/* ─── Experience ──────────────────────────────── */}
       <section
-        id="track-record"
-        className="py-24 md:py-36 px-6 md:px-12 bg-surface"
+        id="experience"
+        className="py-24 md:py-32 px-6 md:px-12 bg-surface"
       >
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <p className="font-mono text-[13px] text-accent tracking-[0.2em] uppercase mb-4">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal className="text-center mb-16">
+            <span className="pill bg-white text-teal border border-teal-light text-[13px] mb-5 inline-flex">
               Track Record
-            </p>
-            <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold tracking-tight leading-[1.1] mb-20 max-w-lg">
-              Proven at
-              <br />
-              Every Stage
+            </span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight leading-tight">
+              Proven at every stage
             </h2>
           </ScrollReveal>
 
-          <div className="space-y-14">
-            {timeline.map((item) => (
+          <div className="space-y-5 max-w-3xl mx-auto">
+            {timeline.map((item, i) => (
               <ScrollReveal
                 key={item.period}
-                className={`border-l-2 ${item.featured ? "border-accent" : "border-border"} pl-8 md:pl-12`}
+                delay={i * 80}
+                className={`rounded-2xl border bg-card p-7 md:p-9 ${
+                  item.featured
+                    ? "border-teal/30 shadow-md shadow-teal/5"
+                    : "border-border"
+                }`}
               >
-                <div
-                  className={`font-mono text-[13px] ${item.featured ? "text-accent" : "text-muted"} mb-2 tracking-wide`}
-                >
-                  {item.period}
-                </div>
-                <h3 className="font-display text-xl md:text-2xl font-bold mb-1">
-                  {item.role}
-                </h3>
-                <div className="text-secondary text-base mb-4">
-                  {item.company}
-                </div>
-                <p className="text-secondary/80 text-[15px] leading-relaxed max-w-2xl">
-                  {item.description}
-                </p>
-                {item.partners && (
-                  <div className="flex flex-wrap gap-x-5 gap-y-2 mt-5">
-                    {item.partners.map((partner) => (
-                      <span
-                        key={partner}
-                        className="font-mono text-[12px] text-muted/70 tracking-wider"
-                      >
-                        {partner}
-                      </span>
-                    ))}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+                  <div>
+                    <h3 className="font-display text-lg font-bold tracking-tight">
+                      {item.role}
+                    </h3>
+                    <div className="text-secondary text-[15px]">
+                      {item.company}
+                    </div>
                   </div>
-                )}
+                  <div
+                    className={`text-[13px] font-medium shrink-0 ${item.featured ? "text-teal" : "text-muted"}`}
+                  >
+                    {item.period}
+                  </div>
+                </div>
+                <p className="text-secondary text-[15px] leading-relaxed">
+                  {item.highlight}
+                </p>
               </ScrollReveal>
             ))}
           </div>
 
-          {/* Patent callout */}
-          <ScrollReveal className="mt-20 p-8 md:p-11 border border-border bg-card/50">
-            <div className="flex items-start gap-4">
-              <div className="font-mono text-accent text-2xl leading-none mt-0.5 hidden sm:block">
-                &sect;
-              </div>
+          {/* Patent */}
+          <ScrollReveal className="mt-8 max-w-3xl mx-auto">
+            <div className="rounded-2xl border border-teal/20 bg-gradient-to-r from-teal-50 to-white p-7 md:p-9 flex items-start gap-4">
+              <div className="text-3xl shrink-0">📜</div>
               <div>
-                <div className="font-mono text-[13px] text-accent mb-2 tracking-wide">
+                <div className="text-teal text-[13px] font-semibold mb-1">
                   U.S. Patent 7,337,127
                 </div>
-                <h3 className="font-display text-lg md:text-xl font-bold mb-2">
+                <h3 className="font-display font-bold tracking-tight mb-1">
                   Targeted Marketing System and Method
                 </h3>
-                <p className="text-secondary text-[15px]">
+                <p className="text-secondary text-[14px]">
                   Co-authored foundational patent covering Virtual Try-On on
-                  user&apos;s own image in marketing applications.
+                  user&apos;s own image in marketing.
                 </p>
               </div>
             </div>
@@ -375,103 +392,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Technical Expertise */}
-      <section id="expertise" className="py-24 md:py-36 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <p className="font-mono text-[13px] text-accent tracking-[0.2em] uppercase mb-4">
+      {/* ─── Skills ──────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal className="text-center mb-16">
+            <span className="pill bg-teal-50 text-teal border border-teal-light text-[13px] mb-5 inline-flex">
               Expertise
-            </p>
-            <h2 className="font-display text-[clamp(2.25rem,5vw,3.75rem)] font-bold tracking-tight leading-[1.1] mb-20 max-w-md">
-              Technical
-              <br />
-              Depth
+            </span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight leading-tight">
+              Deep technical breadth
             </h2>
           </ScrollReveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
-            {skillGroups.map((group, i) => (
-              <ScrollReveal key={group.category} delay={i * 70}>
-                <h3 className="font-mono text-[12px] text-accent tracking-[0.2em] uppercase mb-5">
-                  {group.category}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {skillCategories.map((cat, i) => (
+              <ScrollReveal key={cat.name} delay={i * 60}>
+                <h3 className="font-display text-base font-bold text-foreground mb-4 tracking-tight">
+                  {cat.name}
                 </h3>
-                <ul className="space-y-2.5">
-                  {group.skills.map((skill) => (
-                    <li
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((skill) => (
+                    <span
                       key={skill}
-                      className="text-secondary text-[14px] flex items-start gap-2.5"
+                      className="text-[13px] text-secondary bg-surface-warm border border-border px-3 py-1.5 rounded-lg"
                     >
-                      <span className="text-border text-[8px] mt-[7px] shrink-0">
-                        &#9670;
-                      </span>
                       {skill}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-28 md:py-40 px-6 md:px-12 dot-grid relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 pointer-events-none" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <ScrollReveal>
-            <h2 className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.05] mb-7">
-              Let&apos;s Build
-              <br />
-              Something Great
-            </h2>
-            <p className="text-secondary text-lg md:text-xl leading-relaxed mb-14 max-w-xl mx-auto">
-              Available for fractional CTO, founding CTO, and senior full stack
-              engineering engagements.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-              <a
-                href="mailto:contact@darren.lu"
-                className="group inline-flex items-center gap-3 px-9 py-4 bg-accent text-black font-mono text-[13px] tracking-[0.12em] font-bold hover:bg-foreground transition-colors duration-300"
-              >
-                CONTACT@DARREN.LU
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                  &rarr;
-                </span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/DarrenLu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 px-9 py-4 border border-border text-secondary font-mono text-[13px] tracking-[0.12em] hover:text-foreground hover:border-foreground/30 transition-all duration-300"
-              >
-                LINKEDIN
-                <span className="inline-block transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                  &#8599;
-                </span>
-              </a>
+      {/* ─── CTA ─────────────────────────────────────── */}
+      <section className="py-24 md:py-32 px-6 md:px-12">
+        <ScrollReveal>
+          <div className="max-w-4xl mx-auto teal-gradient-bg rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden">
+            {/* Decorative dots */}
+            <div
+              className="absolute inset-0 dots-pattern opacity-20 pointer-events-none"
+              aria-hidden="true"
+            />
+            <div className="relative z-10">
+              <h2 className="font-display text-[clamp(2rem,4.5vw,3.25rem)] font-bold tracking-tight leading-tight mb-5">
+                Let&apos;s build something
+                <br />
+                great together
+              </h2>
+              <p className="text-white/80 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+                Available for fractional CTO, founding CTO, and senior full
+                stack engineering engagements.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="mailto:contact@darren.lu"
+                  className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-teal-dark font-bold text-[15px] hover:bg-teal-50 transition-all duration-300 shadow-lg"
+                >
+                  contact@darren.lu
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-0.5">
+                    &rarr;
+                  </span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/DarrenLu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/30 text-white font-medium text-[15px] hover:bg-white/10 transition-all duration-300"
+                >
+                  LinkedIn
+                  <span className="text-sm">&#8599;</span>
+                </a>
+              </div>
             </div>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
       </section>
 
-      {/* Footer */}
+      {/* ─── Footer ──────────────────────────────────── */}
       <footer className="border-t border-border py-8 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="font-mono text-[12px] text-muted/60">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-sm text-muted">
             &copy; 2026 Darren Lu &middot; Newport Beach, California
           </div>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-6">
             <a
               href="https://www.linkedin.com/in/DarrenLu/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[12px] text-muted/60 hover:text-foreground transition-colors accent-line"
+              className="text-sm text-muted hover:text-teal transition-colors accent-line"
             >
               LinkedIn
             </a>
             <a
               href="mailto:contact@darren.lu"
-              className="font-mono text-[12px] text-muted/60 hover:text-foreground transition-colors accent-line"
+              className="text-sm text-muted hover:text-teal transition-colors accent-line"
             >
               Email
             </a>

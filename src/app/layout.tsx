@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { DM_Sans, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
@@ -12,15 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Darren Lu — Founding CTO & Principal Full Stack Engineer",
+  title: "Darren Lu — Founding CTO & Full Stack Engineer",
   description:
-    "25+ years architecting scalable platforms, leading engineering teams, and shipping high-impact products. Available for fractional CTO, founding CTO, and senior full stack engineering engagements.",
+    "25+ years architecting scalable platforms, leading engineering teams, and shipping high-impact products. Available for fractional CTO, founding CTO, and senior engineering roles.",
   keywords: [
     "CTO",
     "Fractional CTO",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Darren Lu" }],
   openGraph: {
-    title: "Darren Lu — Founding CTO & Principal Full Stack Engineer",
+    title: "Darren Lu — Founding CTO & Full Stack Engineer",
     description:
       "25+ years architecting scalable platforms and leading engineering teams. Expert in React, Cloud DevOps, and AI/AR Technologies.",
     url: "https://darren.lu",
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} antialiased`}
+        className={`${dmSans.variable} ${geistMono.variable} ${bricolage.variable} antialiased`}
       >
         {children}
       </body>
