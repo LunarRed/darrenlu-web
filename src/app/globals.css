@@ -1,26 +1,195 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── Design System ──────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #000000;
+  --color-foreground: #fafafa;
+  --color-surface: #060608;
+  --color-card: #0e0e11;
+  --color-border: #1a1a1f;
+  --color-muted: #4a4a56;
+  --color-secondary: #87878f;
+  --color-accent: #00ff9f;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-syne);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(0, 255, 159, 0.25);
+  color: #fff;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* ─── Background Patterns ────────────────────────────── */
+
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* ─── Hero Glow ──────────────────────────────────────── */
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 159, 0.15) 0%,
+    rgba(0, 255, 159, 0.05) 30%,
+    transparent 65%
+  );
+  border-radius: 50%;
+  animation: glow-pulse 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ─── Hero Entrance Animations ───────────────────────── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  opacity: 0;
+}
+
+.anim-fade-in {
+  animation: fade-in 1s ease both;
+  opacity: 0;
+}
+
+/* ─── Scroll Indicator ───────────────────────────────── */
+
+@keyframes bounce-down {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.scroll-indicator {
+  animation: bounce-down 2.5s ease-in-out infinite;
+}
+
+/* ─── Scroll Reveal ──────────────────────────────────── */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Status Pulse ───────────────────────────────────── */
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 159, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 159, 0);
+  }
+}
+
+.status-dot {
+  animation: status-pulse 2.5s ease-in-out infinite;
+}
+
+/* ─── Accent Underline Effect ────────────────────────── */
+
+.accent-line {
+  position: relative;
+}
+
+.accent-line::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accent-line:hover::after {
+  width: 100%;
 }
