@@ -148,9 +148,9 @@ export default function Home() {
             style={{ animationDelay: "0.9s" }}
           >
             {[
-              ["25+", "Years building"],
-              ["2", "US Patents"],
-              ["M+", "Sessions processed"],
+              ["29+", "Years building"],
+              ["8+", "Startups founded"],
+              ["3", "Successful exits"],
             ].map(([num, label]) => (
               <div key={label}>
                 <span className="text-3xl md:text-4xl font-display text-teal">
@@ -180,6 +180,9 @@ export default function Home() {
       <section className="px-6 md:px-12 py-20">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
+            <p className="text-xs font-mono text-teal tracking-[0.2em] uppercase mb-4">
+              Who I Am
+            </p>
             <blockquote className="text-2xl md:text-[2.75rem] font-display leading-snug max-w-4xl">
               I don&apos;t just write code — I build the technical strategy,
               hire the team, and{" "}
@@ -196,10 +199,6 @@ export default function Home() {
             <p className="text-xs font-mono text-teal tracking-[0.2em] uppercase mb-4">
               What I Do
             </p>
-            <h2 className="text-3xl md:text-5xl font-display mb-16 max-w-3xl leading-tight">
-              I help companies build the right thing,{" "}
-              <em>the right way.</em>
-            </h2>
           </ScrollReveal>
 
           <div className="border-t border-border">
@@ -230,8 +229,8 @@ export default function Home() {
               Track Record
             </p>
             <h2 className="text-3xl md:text-5xl font-display mb-16 max-w-4xl leading-tight">
-              I&apos;ve built platforms, led teams, and earned patents along the
-              way.
+              From founding builds to enterprise-scale platforms, I&apos;ve led
+              engineering with measurable outcomes.
             </h2>
           </ScrollReveal>
 
@@ -239,18 +238,59 @@ export default function Home() {
           <ScrollReveal>
             <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mb-16">
               <span className="text-[5rem] md:text-[7rem] leading-none font-display text-teal/20 shrink-0 select-none">
-                7+
+                100MM+ Users
               </span>
               <div className="pt-2 md:pt-4">
                 <h3 className="text-xl md:text-2xl font-semibold tracking-tight mb-3">
-                  Years as CTO, FaceCake Marketing Technologies
+                  Founding CTO, FaceCake Marketing Technologies
                 </h3>
                 <p className="text-secondary leading-relaxed max-w-2xl">
-                  Led all engineering for an AI-powered augmented reality
-                  platform — virtual try-on technology processing millions of
-                  sessions, cross-functional teams, and systems architected from
-                  prototype to enterprise scale. Partners included Microsoft,
-                  Disney, CHANEL, Macy&apos;s, NFL, and Visa.
+                  Since November 2008, I&apos;ve led engineering for FaceCake&apos;s
+                  augmented reality commerce platform, scaling the stack to
+                  support 1M+ virtual products and millions of try-ons monthly,
+                  while leading technical partnerships with Microsoft, Disney,
+                  CHANEL, Macy&apos;s, NFL, and Visa.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* GoApply highlight */}
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mb-16">
+              <span className="text-[5rem] md:text-[7rem] leading-none font-display text-teal/20 shrink-0 select-none">
+                $50MM+ Exit
+              </span>
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-xl md:text-2xl font-semibold tracking-tight mb-3">
+                  SVP of Technology, GoApply Inc.
+                </h3>
+                <p className="text-secondary leading-relaxed max-w-2xl">
+                  From March 2002 to June 2007, I built GoApply&apos;s frontend and
+                  backend from day one, architected core database and web
+                  systems, and grew a 17-person development and network
+                  engineering team through rapid growth to acquisition by
+                  Fidelity National Title.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Autobytel highlight */}
+          <ScrollReveal>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mb-16">
+              <span className="text-[5rem] md:text-[7rem] leading-none font-display text-teal/20 shrink-0 select-none">
+                Series A &rarr; IPO
+              </span>
+              <div className="pt-2 md:pt-4">
+                <h3 className="text-xl md:text-2xl font-semibold tracking-tight mb-3">
+                  Sr. Engineer, Autobytel.com
+                </h3>
+                <p className="text-secondary leading-relaxed max-w-2xl">
+                  Managed all technical operations for 150-node LAN/WAN,
+                  administering routing, firewall, server, and messaging
+                  infrastructure across Cisco, FreeBSD, Windows NT, and Exchange
+                  environments.
                 </p>
               </div>
             </div>
@@ -260,12 +300,12 @@ export default function Home() {
             <ScrollReveal delay={100}>
               <div className="border-l-2 border-teal pl-6 py-1">
                 <h3 className="text-lg md:text-xl font-semibold tracking-tight mb-2">
-                  2 US Patents
+                  Built Engineering Organizations
                 </h3>
                 <p className="text-secondary leading-relaxed">
-                  Augmented reality and computer vision innovations — from
-                  invention to granted patents, solving real problems in spatial
-                  computing and image processing.
+                  Built and managed multiple 25+ person engineering, QA, DevOps, and
+                  technical support departments with modern delivery practices
+                  and end-to-end ownership from architecture through operations.
                 </p>
               </div>
             </ScrollReveal>
@@ -273,13 +313,12 @@ export default function Home() {
             <ScrollReveal delay={200}>
               <div className="border-l-2 border-border pl-6 py-1">
                 <h3 className="text-lg md:text-xl font-semibold tracking-tight mb-2">
-                  From Gaming to Automotive
+                  U.S. Patent 7,337,127
                 </h3>
                 <p className="text-secondary leading-relaxed">
-                  Engineering roles spanning Blizzard Entertainment,
-                  Edmunds.com, and multiple startups built from scratch. Every
-                  industry taught me something about building products people
-                  actually use.
+                  Co-authored the foundational Targeted Marketing System and
+                  Method patent, covering virtual try-on using the user&apos;s own
+                  image in digital marketing workflows.
                 </p>
               </div>
             </ScrollReveal>
@@ -325,7 +364,7 @@ export default function Home() {
       <section className="px-6 md:px-12 py-28 md:py-36">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <div className="w-12 h-px bg-teal mx-auto mb-14" />
+            <div className="w-24 md:w-32 h-px bg-teal mx-auto mb-14" />
             <h2 className="text-3xl md:text-[3.5rem] lg:text-6xl font-display mb-8 max-w-3xl mx-auto leading-tight">
               Ready to build something{" "}
               <em className="text-teal">remarkable?</em>
@@ -336,11 +375,11 @@ export default function Home() {
             </p>
             <div className="flex flex-col items-center gap-8">
               <a
-                href="mailto:darren@darren.lu"
+                href="mailto:contact@darren.lu"
                 className="group inline-flex items-center gap-3 text-teal hover:text-teal-dark transition-colors"
               >
                 <span className="font-mono text-lg md:text-xl tracking-tight">
-                  darren@darren.lu
+                  contact@darren.lu
                 </span>
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 text-xl">
                   &rarr;
@@ -355,7 +394,7 @@ export default function Home() {
                 linkedin.com/in/DarrenLu
               </a>
             </div>
-            <div className="w-12 h-px bg-teal mx-auto mt-16" />
+            <div className="w-24 md:w-32 h-px bg-teal mx-auto mt-16" />
           </ScrollReveal>
         </div>
       </section>

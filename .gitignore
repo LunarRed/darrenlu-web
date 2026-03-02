@@ -20,6 +20,9 @@
 # production
 /build
 
+# project-specific
+/assets/
+
 # misc
 .DS_Store
 *.pem
