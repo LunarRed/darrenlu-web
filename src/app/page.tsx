@@ -78,7 +78,7 @@ export default function Home() {
               Record
             </a>
             <a
-              href="mailto:darren@darren.lu"
+              href="mailto:contact@darren.lu"
               className="text-teal hover:text-teal-dark transition-colors font-medium"
             >
               Get in touch
