@@ -1,26 +1,20 @@
 @import "tailwindcss";
 
-/* ─── Design System: Bright Teal ─────────────────────── */
+/* ─── Design System: Warm Editorial ──────────────────── */
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  --color-surface: #f0fdfa;
-  --color-surface-warm: #f8fafc;
+  --color-background: #faf7f2;
+  --color-foreground: #1a1a2e;
+  --color-surface: #f3ede4;
   --color-card: #ffffff;
-  --color-border: #e2e8f0;
-  --color-border-light: #f1f5f9;
-  --color-muted: #94a3b8;
-  --color-secondary: #475569;
+  --color-border: #e5dfd6;
+  --color-muted: #9a918a;
+  --color-secondary: #5c564f;
   --color-teal: #0d9488;
-  --color-teal-dark: #0f766e;
-  --color-teal-light: #ccfbf1;
-  --color-teal-50: #f0fdfa;
-  --color-cyan: #06b6d4;
-  --color-coral: #f97066;
+  --color-teal-dark: #0a7c72;
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-bricolage-grotesque);
+  --font-display: var(--font-instrument-serif);
 }
 
 html {
@@ -35,62 +29,7 @@ body {
 
 ::selection {
   background: rgba(13, 148, 136, 0.15);
-  color: #0f172a;
-}
-
-/* ─── Gradient Text ──────────────────────────────────── */
-
-.gradient-text {
-  background: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #0d9488 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ─── Hero Decorative Shapes ─────────────────────────── */
-
-.hero-blob-1 {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
-  pointer-events: none;
-  animation: float-slow 20s ease-in-out infinite;
-}
-
-.hero-blob-2 {
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-  animation: float-slow 16s ease-in-out infinite reverse;
-}
-
-.hero-ring {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 1px solid rgba(13, 148, 136, 0.1);
-  pointer-events: none;
-  animation: float-slow 24s ease-in-out infinite;
-}
-
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(15px, -20px) scale(1.03);
-  }
-  66% {
-    transform: translate(-10px, 12px) scale(0.97);
-  }
+  color: #1a1a2e;
 }
 
 /* ─── Entrance Animations ────────────────────────────── */
@@ -140,87 +79,79 @@ body {
   transform: translateY(0);
 }
 
-/* ─── Card Hover ─────────────────────────────────────── */
+/* ─── Service Rows ───────────────────────────────────── */
 
-.card-lift {
-  transition:
-    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.3s ease;
-}
-
-.card-lift:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 12px 40px -8px rgba(13, 148, 136, 0.12),
-    0 4px 12px -2px rgba(0, 0, 0, 0.05);
-}
-
-/* ─── Pill Badge ─────────────────────────────────────── */
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-/* ─── Teal Gradient Background ───────────────────────── */
-
-.teal-gradient-bg {
-  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
-}
-
-/* ─── Decorative Dots Pattern ────────────────────────── */
-
-.dots-pattern {
-  background-image: radial-gradient(
-    circle,
-    rgba(13, 148, 136, 0.12) 1px,
-    transparent 1px
-  );
-  background-size: 20px 20px;
-}
-
-/* ─── Accent Underline ───────────────────────────────── */
-
-.accent-line {
+.service-row {
   position: relative;
+  transition: background-color 0.35s ease;
 }
 
-.accent-line::after {
+.service-row::after {
   content: "";
   position: absolute;
-  bottom: -2px;
   left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #0d9488, #06b6d4);
-  border-radius: 1px;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-teal);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.accent-line:hover::after {
-  width: 100%;
+.service-row:hover {
+  background-color: rgba(13, 148, 136, 0.04);
 }
 
-/* ─── Scrollbar (subtle) ─────────────────────────────── */
+.service-row:hover::after {
+  transform: scaleY(1);
+}
+
+/* ─── Marquee ────────────────────────────────────────── */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────── */
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #d1cbc2;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--color-muted);
 }

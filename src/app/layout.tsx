@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import { DM_Sans, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage-grotesque",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -52,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${geistMono.variable} ${bricolage.variable} antialiased`}
+        className={`${dmSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}
       >
         {children}
       </body>
