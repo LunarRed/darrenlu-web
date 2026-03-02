@@ -88,7 +88,7 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ───────────────────────────────────── */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-28 pb-16 relative">
+      <section className="min-h-screen flex flex-col justify-start md:justify-center px-6 md:px-12 pt-24 md:pt-28 pb-16 relative">
         <div className="max-w-7xl mx-auto w-full">
           {/* Availability */}
           <div
@@ -107,25 +107,25 @@ export default function Home() {
           {/* Headline */}
           <h1 className="relative max-w-5xl">
             <span
-              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1] font-display tracking-tight anim-fade-up"
+              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1.08] md:leading-[1] font-display tracking-normal md:tracking-tight anim-fade-up"
               style={{ animationDelay: "0.2s" }}
             >
               I build the
             </span>
             <span
-              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1] font-display tracking-tight anim-fade-up"
+              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1.08] md:leading-[1] font-display tracking-normal md:tracking-tight anim-fade-up"
               style={{ animationDelay: "0.35s" }}
             >
               <em className="text-teal">technical foundations</em>
             </span>
             <span
-              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1] font-display tracking-tight anim-fade-up"
+              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1.08] md:leading-[1] font-display tracking-normal md:tracking-tight anim-fade-up"
               style={{ animationDelay: "0.5s" }}
             >
               that turn ideas into
             </span>
             <span
-              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1] font-display tracking-tight anim-fade-up"
+              className="block text-[clamp(3.5rem,6.5vw,6rem)] leading-[1.08] md:leading-[1] font-display tracking-normal md:tracking-tight anim-fade-up"
               style={{ animationDelay: "0.65s" }}
             >
               products at scale.
