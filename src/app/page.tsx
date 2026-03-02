@@ -137,7 +137,7 @@ export default function Home() {
             className="mt-10 text-lg md:text-xl text-secondary max-w-2xl leading-relaxed anim-fade-up"
             style={{ animationDelay: "0.75s" }}
           >
-            Founding CTO &amp; Full Stack Engineer with 25 years of shipping
+            Founding CTO &amp; Full Stack Engineer with over 29 years of shipping
             products that matter — from startup MVPs to platforms serving
             millions.
           </p>
